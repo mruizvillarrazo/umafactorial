@@ -34,3 +34,4 @@ git checkout branch_name --> Cambias de la rama en la que estés a branch_name, 
 git stash --> Guardas temporalmente cualquier cosa que modifiques sobre la rama en la que estes
 git stash pop --> Recupera los cambios temporales que se realizaron en la rama en la que te encuentras actualmente
 git merge branch --> Fusiona el contenido de la rama branch con la rama en la que estes posicionado
+git push --all origin --> Sincroniza todas las ramas de su nuestro repositorio local
