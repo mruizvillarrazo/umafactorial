@@ -1,0 +1,36 @@
+item 1 - Usamos el comando git clone url dentro de nuestra carpeta destino del proyecto. Donde pone url se sustituye por la direccion web de tu repositorio de GitHub
+item 2 - En la rama main creamos la clase factorial y añadimos el codigo dado
+item 3 - Usamos git add factorial.java y commit -m "texto" donde en texto se introduce un mensaje complementario al añadir las modificaciones al repositorio local
+item 4 - Se realizan cambios sobre la clase java y se vuelve a hacer un add y un commit pero ahora con el mensaje "refactorizacion". El mensaje del commit del apartado previo era "implementacion inicial"
+item 5 - Subimos lo que tenemos hasta ahora de la rama Main al repositorio remoto con el comando git push origin main
+item 6 - Creamos una nueva rama denominada recursivo y nos cambiamos a ella con el comando git checkout -b recursivo
+item 7 - En la rama recursivo modificamos el metodo fact y aplicamos cambios con add y commit con el mensaje "implementacion recursiva"
+item 8 - Se sube al repositorio remoto la rama recursivo con git push origin recursivo
+item 9 - Volvemos a la rama main con el comando git checkout main
+item 10 - Modificamos el método main de la rama main y añadimos cambios con add y commit poniendo "correccion numeros negativos"
+item 11 - Los cambios hechos en la rama main se actualizan en el control remoto haciendo git push origin main
+item 12 - Se vuelve a la rama recursivo con git checkout y se cambia en el metodo fact el numero del condicional if de 0 a 1. Posteriormente se añade con add y commit poniendo "optimizacion"
+item 13 - Se vuelve a la rama main y se fusiona todo lo hecho en una rama y en la otra con git merge recursivo sin conflicto alguno
+item 14 - Se crea una nueva rama y nos dirigimos a ella con git checkout -b refacIO
+item 15 - En esta rama extraemos del metodo main informacion para crear el metodo getNumber, se modifica y se añade con add y commit poniendo "refactorizaicon de metodo de entrada"
+item 16 - Se termina de desglosar el metodo main en otro metodo llamado showFact
+item 17 - Antes de hacer lo de siempre de git add factorial.java y git commit -m "" realizamos un guardado temporal del codigo con git stash porque tenemos que volver a la otra rama hacer modificaciones
+item 18 - Volvemos a la rama main con git checkout main
+item 19 - Modificamos el codigo de main para añadir el paquete BigInteger al codigo y lo guardamos con add y commit como "cambio de long a BigInteger"
+item 20 - Enviamos estos cambios de la rama main al repositorio remoto con git push origin main
+item 21 - Volvemos a la rama refacIO y para retomar lo que teniamos guardado usamos git stash pop
+item 22 - Una vez recuperados estos datos se guardan como "refactorizacion de metodo de salida"
+item 23 - Se vuelve a la rama main con git checkout main y se hace un merge para fusionar lo hecho en la rama refacIO con la main
+item 24 - Surgen conflictos a la hora de fusionar los cambios porque hay información superpuesta, así que se reajusta todo de forma que no se pise información combinando los cambios de ambas ramas.
+item 25 - Una vez ya mezclado todo se envian los cambios al repositorio remoto con git push origin main
+
+Lista de comandos:
+git clone url --> Clona tu repositorio de GitHub en el sitio donde quieras establecerlo
+git add archivo --> Manda los cambios que hagas en el archivo que pongas al staging area
+git commit -m "mensaje" --> Mandas la información que estaba en el staging area a tu repositorio local con el mensaje que indiques entre las comillas
+git push origin branch --> Mandas la información de la rama que selecciones de tu repositorio local a tu repositorio remoto
+git checkout -b branch_name --> Creas una nueva rama en tu repositorio y te desplazas a ella
+git checkout branch_name --> Cambias de la rama en la que estés a branch_name, sin crear una rama nueva
+git stash --> Guardas temporalmente cualquier cosa que modifiques sobre la rama en la que estes
+git stash pop --> Recupera los cambios temporales que se realizaron en la rama en la que te encuentras actualmente
+git merge branch --> Fusiona el contenido de la rama branch con la rama en la que estes posicionado
